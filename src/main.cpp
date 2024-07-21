@@ -143,7 +143,7 @@ void turnLeft(double angle) {
    fl.spin(reverse, 5 + diff * 0.3, pct);
    ml.spin(reverse, 5 + diff * 0.3, pct);
    bl.spin(reverse, 5 + diff * 0.3, pct);
-   wait(1, msec);
+   wait(2, msec);
  }
 }
 
