@@ -227,7 +227,7 @@ void auton2() {
   turnLeft(90);
   pid(900);
   turnLeft(90);
-  pid(5);
+  pid(4);
 
 
   // pid(900);
