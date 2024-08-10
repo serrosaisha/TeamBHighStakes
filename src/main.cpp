@@ -115,6 +115,15 @@ void unclamp() {
  mogo2.set(false);
 }
 
+void stopAllWheels(){
+ fl.stop();
+ ml.stop();
+ bl.stop();
+ fr.stop();
+ mr.stop();
+ br.stop();
+}
+
 void moveAllWheels(int SpeedLeft, int SpeedRight, int ) {
  fl.spin(forward, SpeedLeft + SpeedRight, percent);
  ml.spin(forward, SpeedLeft + SpeedRight, percent);
@@ -145,6 +154,7 @@ void turnLeft(double angle) {
    bl.spin(reverse, 5 + diff * 0.3, pct);
    wait(2, msec);
  }
+ stopAllWheels();
 }
 
 void intaking() {
@@ -175,6 +185,7 @@ void turnRight(double angle) {
    mr.spin(reverse, 5 + diff * 0.3, pct);
    br.spin(reverse, 5 + diff * 0.3, pct);
  }
+ stopAllWheels();
 }
 
 void setVelocity(double vel) {
@@ -285,16 +296,6 @@ void old_arcade() {
  br.spin(reverse, speedright, percent);
 }
 
-
-
-void stopAllWheels(){
- fl.stop();
- ml.stop();
- bl.stop();
- fr.stop();
- mr.stop();
- br.stop();
-}
 
 //logic statement
 bool clamptrue = false;
